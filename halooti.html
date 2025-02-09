@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hiiii Halootiiii</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            margin: 0;
+            background-image: url("images/background.jpg");
+            background-size: cover;
+            background-color: #ffe6f2;
+            font-family: 'josephsophia', 'Love House'; /* Add a font */
+        }
+
+        .card-container {
+            width: 50vw;
+            height: 60vh;
+            perspective: 1000px;
+        }
+
+        .card {
+            position: relative;
+            width: 100%;
+            height: 100%;
+            transition: transform 1.8s ease-in-out;
+            transform-style: preserve-3d;
+        }
+
+        .card:hover {
+            transition-delay: 0.2s;
+            transform: rotateY(180deg);
+        }
+
+        .card-front{
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            backface-visibility: hidden;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            border-radius: 30px;
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
+            font-size:2.6em;
+            font-family:'Salmon Season';
+        }
+
+        .card-back{
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            backface-visibility: hidden;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            border-radius: 30px;
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
+            font-size:1.5em;
+            font-family:'Salmon Season';
+        }
+
+        .card-front {
+            background-color: #fff0f5;
+            color: #ffffff;
+            transform: rotateY(0deg);
+            background-image: url("images/front_background.jpg"); /* Front background image */
+            background-size: cover; /* or contain, depending on your image */
+            background-position: center;
+        }
+        
+
+        .card-back {
+            background-color: #FFB6C1;
+            color: white;
+            transform: rotateY(180deg);
+            background-image: url("images/back_background.jpg"); /* Back background image */
+            background-size: cover;
+            background-position: center;
+        }
+
+        .card-content {
+            text-align: center;
+            padding: 20px;
+            /* Add styles to make text more readable on background images */
+            color: #6f1e1e; /* Example: Darker text color */
+            text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3); /* Example: Add a text shadow */
+        }
+        .heart {
+            width: 100px;
+            height: 100px;
+            background: none;
+        }
+
+        .heart img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .heart:hover {
+            transform: scale(1.1);
+            transition: transform 0.3s ease;
+        }
+
+        /* Hide the heart on the front */
+        .card-front .heart {
+            display: none;
+        }
+
+        /* Show the heart on the back */
+        .card-back .heart {
+            display: block; /* Or display: flex; if you want flexbox layout */
+        }
+
+    </style>
+</head>
+<body>
+
+<div class="card-container">
+    <div class="card">
+        <div class="card-front">
+            <div class="card-content">
+                <div class="heart"></div>
+                <h2>Wassup cutie <3 </h2>
+                <p>Hover on the card please, ma'am.</p>
+            </div>
+        </div>
+        <div class="card-back">
+            <div class="card-content">
+                <div class="heart">
+                    <img src="images/heart.gif" alt="Animated Heart"> </div>
+                <h2>Good girl ♥ </h2>
+                    <h2>So, princess, I wanted to let you know that when i first met u, alot of things abt you made me fall for you. your smile, your laugh, your eyes, your voice, your hair, the way you talk, your confidence, etc. I love you so much ♥</h2>
+                <p>Would you like to be my valentine + my girlfriend? if yes, reply with "Ofcourse, ya 27la wahed fel donya, i love you so much". if no, reply with "8or men weshy yad"</p>
+            </div>
+        </div>
+    </div>
+</div>
+
+</body>
+</html>
